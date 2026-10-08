@@ -20,4 +20,28 @@
         font-size: 28px !important;
         font-weight: 800 !important;
     }
+
+    /* Tall tablet portrait (e.g. iPad Pro 13"): the component's lg vertical
+       centering on the full-height wrapper leaves a large empty band above the
+       title. Top-align there; landscape laptops/desktops keep the centered look. */
+    @media (min-width: 1024px) and (min-height: 1200px) {
+        .slide-container [class*="lg:items-center"] {
+            align-items: flex-start;
+        }
+    }
+</style>
+
+{{-- Local mobile fix only: the platform shell's fixed mobile chrome (logo header +
+     prev/next nav row + progress bar, ≈110px) overlays the top of the slide viewport
+     on phones/tablets. Push the slide content below it and compensate full-height
+     min-heights so nothing sits behind the chrome. Desktop (>=1024px) is unchanged. --}}
+<style>
+    @media (max-width: 1023px) {
+        body > .slide-layout > .relative.z-10 {
+            padding-top: 112px;
+        }
+        body > .slide-layout > .relative.z-10 .min-h-\[100dvh\] {
+            min-height: calc(100dvh - 112px);
+        }
+    }
 </style>

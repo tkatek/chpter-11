@@ -91,3 +91,18 @@
 @endphp
 
 @include('slider.video.interactive', ['content' => $content])
+
+{{-- Local mobile fix only: the platform shell's fixed mobile chrome (logo header +
+     prev/next nav row + progress bar, ≈110px) overlays the top of the slide viewport
+     on phones/tablets. Push the slide content below it and compensate full-height
+     min-heights so nothing sits behind the chrome. Desktop (>=1024px) is unchanged. --}}
+<style>
+    @media (max-width: 1023px) {
+        body > .slide-layout > .relative.z-10 {
+            padding-top: 112px;
+        }
+        body > .slide-layout > .relative.z-10 .min-h-\[100dvh\] {
+            min-height: calc(100dvh - 112px);
+        }
+    }
+</style>

@@ -60,3 +60,30 @@ The presenter said that sports (had reached) worldwide audiences.',
 @endphp
 
 @include('slider.game.question-answer', ['content' => $content])
+
+{{-- Local responsive fixes only:
+     1) On phones/tablets the eight number cards fill the viewport, so the
+        component's full-height vertical centering collapses and the top of the
+        board becomes unreachable. Anchor it to the top of the slide area below
+        the lg breakpoint — the same pattern the platform's image-card slide uses
+        (items-start … lg:items-center).
+     2) The platform shell's fixed mobile chrome (logo header + prev/next nav row
+        + progress bar, ≈110px) overlays the top of the slide viewport on
+        phones/tablets. Push the slide content below it and compensate full-height
+        min-heights so nothing sits behind the chrome. Desktop (≥1024px) is
+        unchanged. --}}
+<style>
+    @media (max-width: 1023px) {
+        [data-qa-game] > div.min-h-\[100dvh\] {
+            align-items: flex-start;
+        }
+
+        body > .slide-layout > .relative.z-10 {
+            padding-top: 112px;
+        }
+
+        body > .slide-layout > .relative.z-10 .min-h-\[100dvh\] {
+            min-height: calc(100dvh - 112px);
+        }
+    }
+</style>
