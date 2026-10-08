@@ -11,11 +11,11 @@
 
 @section('content')
     <div class="min-h-[100dvh] w-full overflow-x-hidden font-sans">
-        <div class="mx-auto flex min-h-[100dvh] w-full max-w-[1440px] items-start justify-center px-3 py-7 sm:px-5">
+        <div class="mx-auto flex min-h-[100dvh] w-full max-w-[1440px] items-start justify-center px-3 py-7 sm:px-5 lg:py-5 xl:py-7">
             <main class="w-full">
                 @include('slider.components.title-subtitle')
 
-                <article aria-label="Reading passage" class="mx-auto mt-4 h-fit w-full max-w-[760px] rounded-[1.6rem] border border-indigo-200/80 bg-white/95 p-4 text-left shadow-[0_18px_48px_rgba(15,23,42,.1)] dark:border-indigo-500/30 dark:bg-slate-900/95 sm:mt-5 sm:p-6 lg:max-w-[1020px] xl:max-w-[1240px]">
+                <article aria-label="Reading passage" class="mx-auto mt-4 h-fit w-full max-w-[760px] rounded-[1.6rem] border border-indigo-200/80 bg-white/95 p-4 text-left shadow-[0_18px_48px_rgba(15,23,42,.1)] dark:border-indigo-500/30 dark:bg-slate-900/95 sm:mt-5 sm:p-6 lg:mt-4 lg:max-w-[1020px] lg:p-5 xl:mt-5 xl:max-w-[1240px] xl:p-6">
                     <div class="flex gap-4">
                         <span class="w-1.5 shrink-0 self-stretch rounded-full bg-gradient-to-b from-sky-400 via-indigo-500 to-violet-500" aria-hidden="true"></span>
                         <div class="min-w-0 flex-1">
