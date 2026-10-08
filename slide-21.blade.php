@@ -15,7 +15,7 @@
             <main class="w-full">
                 @include('slider.components.title-subtitle')
 
-                <article aria-label="Reading passage" class="mx-auto mt-4 h-fit w-full max-w-[760px] rounded-[1.6rem] border border-indigo-200/80 bg-white/95 p-4 text-left shadow-[0_18px_48px_rgba(15,23,42,.1)] dark:border-indigo-500/30 dark:bg-slate-900/95 sm:mt-5 sm:p-6">
+                <article aria-label="Reading passage" class="mx-auto mt-4 h-fit w-full max-w-[760px] rounded-[1.6rem] border border-indigo-200/80 bg-white/95 p-4 text-left shadow-[0_18px_48px_rgba(15,23,42,.1)] dark:border-indigo-500/30 dark:bg-slate-900/95 sm:mt-5 sm:p-6 lg:max-w-[1020px] xl:max-w-[1240px]">
                     <div class="flex gap-4">
                         <span class="w-1.5 shrink-0 self-stretch rounded-full bg-gradient-to-b from-sky-400 via-indigo-500 to-violet-500" aria-hidden="true"></span>
                         <div class="min-w-0 flex-1">
