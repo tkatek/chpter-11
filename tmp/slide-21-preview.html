@@ -1,14 +1,10 @@
-{{-- Canva source page(s) 22: https://canva.link/2q0owwdnfy54l3f --}}
-@php
-    $content = [
-        'title' => 'Can We Trust Technology in Sport?',
-        'subtitle' => 'Read the article, then complete the activities that follow. The article refers to the 2025 sporting season.',
-        'page_title' => 'Can We Trust Technology in Sport?',
-    ];
-@endphp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;650;700;800&display=swap" rel="stylesheet">
+<style>html,body{margin:0;padding:0;background:#f2f5fc;min-height:100%;}</style>
 
-@extends('slider.simple-layout')
-@section('style')
 <style>
 .lesson11 { max-width:1200px; margin:auto; padding:36px 24px; color:#1e293b; font-family:"Plus Jakarta Sans",sans-serif; }
 .lesson11-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
@@ -88,10 +84,11 @@
 @media(max-width:900px){.reading-layout{grid-template-columns:1fr}.reading-visual{position:relative;top:auto;max-width:560px;margin-inline:auto}.reading-visual-frame{aspect-ratio:16/9}}
 @media(max-width:560px){.reading-body{padding:0 14px 16px 60px}.reading-section summary{padding:11px 13px}.reading-body p{font-size:15px}.reading-visual-caption{padding:14px}}
 </style>
-@endsection
-@section('content')
+
+</head>
+<body>
 <main class="lesson11">
-@include('slider.components.title-subtitle')
+<h1 style="margin:0 0 10px;font-size:34px;line-height:1.25;font-weight:800;color:#3730a3;"><span>Can We Trust Technology in Sport?</span></h1><p style="margin:0 0 6px;color:#475569;font-size:17px;line-height:1.5;">Read the article, then complete the activities that follow. The article refers to the 2025 sporting season.</p>
 <div class="reading-layout">
     <article class="reading-accordion" aria-label="Article paragraphs">
         <details class="reading-section" open>
@@ -118,10 +115,12 @@
 
     <figure class="reading-visual">
         <div class="reading-visual-frame">
-            <img src="{{ materialAsset('slider/B2/Advanced/chapter-11/img/slide21/var-review.jpg') }}" alt="A football referee checking a decision using a pitch-side VAR monitor">
+            <img src="https://picsum.photos/seed/varreview/800/1000" alt="A football referee checking a decision using a pitch-side VAR monitor">
             <span class="reading-visual-label">VAR in action</span>
         </div>
     </figure>
 </div>
 </main>
-@endsection
+
+</body>
+</html>

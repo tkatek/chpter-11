@@ -1,7 +1,7 @@
 {{-- Canva source page(s) 30: https://canva.link/2q0owwdnfy54l3f --}}
 @php
     $content = [
-        'title' => 'Thanks!',
+        'title' => 'Thanks',
         'subtitle' => 'Great job! You’ve completed this lesson.',
         'page_title' => 'Thanks!',
     ];
@@ -198,7 +198,7 @@
 
                 <div class="task-block">
                     <label class="task-label" for="exit-vocab">1. Vocabulary</label>
-                    <p class="task-copy">Complete the sentence.</p>
+                    <p class="task-copy">Complete:</p>
                     <p class="sentence-line">
                         Coaches can use
                         <input id="exit-vocab" class="complete-inline" aria-label="Missing vocabulary word">
@@ -208,7 +208,7 @@
 
                 <div class="task-block">
                     <label class="task-label" for="exit-question">2. Grammar</label>
-                    <p class="task-copy">Report the question.</p>
+                    <p class="task-copy">Report the question:</p>
                     <p class="sentence-line">“Can technology make sport safer?”</p>
                     <p class="sentence-line">→ The interviewer asked ____________________.</p>
                     <textarea id="exit-question" class="complete-field grammar-field" aria-label="Reported question"></textarea>

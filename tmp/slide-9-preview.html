@@ -1,26 +1,10 @@
-{{-- Canva source page(s) 10: https://canva.link/2q0owwdnfy54l3f --}}
-@php
-    $content = [
-        'title' => 'Useful Phrases',
-        'subtitle' => 'Listen and practise. Each audio contains only the phrase.',
-        'page_title' => 'Useful Phrases',
-    ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;650;700;800&display=swap" rel="stylesheet">
+<style>html,body{margin:0;padding:0;background:#f2f5fc;min-height:100%;}</style>
 
-    $phrases = [
-        ['text' => 'take sport to new heights', 'file' => 'take-sport-to-new-heights.mp3'],
-        ['text' => 'rely entirely on', 'file' => 'rely-entirely-on.mp3'],
-        ['text' => 'make informed decisions', 'file' => 'make-informed-decisions.mp3'],
-        ['text' => 'identify strengths and weaknesses', 'file' => 'identify-strengths-and-weaknesses.mp3'],
-        ['text' => 'develop effective strategies', 'file' => 'develop-effective-strategies.mp3'],
-        ['text' => 'create new possibilities', 'file' => 'create-new-possibilities.mp3'],
-        ['text' => 'replace human judgement', 'file' => 'replace-human-judgement.mp3'],
-        ['text' => 'find the right balance', 'file' => 'find-the-right-balance.mp3'],
-    ];
-@endphp
-
-@extends('slider.simple-layout')
-
-@section('style')
 <style>
 .phrase-slide {
     --ink: #11182b;
@@ -152,46 +136,11 @@
     .phrase-heading p { font-size: 16px; }
 }
 </style>
-@endsection
 
-@section('content')
-<main class="phrase-slide">
-    <header class="phrase-heading">
-        <h1>{{ $content['title'] }}</h1>
-        <p>{{ $content['subtitle'] }}</p>
-    </header>
+</head>
+<body>
 
-    <div class="phrase-layout">
-        <section class="phrase-list" aria-label="Useful phrases">
-            @foreach ($phrases as $index => $phrase)
-                <article class="phrase-card">
-                    <span class="phrase-number">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                    <p class="phrase-text">{{ $phrase['text'] }}</p>
-                    <button
-                        class="phrase-audio"
-                        type="button"
-                        aria-label="Play {{ $phrase['text'] }}"
-                        onclick="const audio=this.nextElementSibling; audio.currentTime=0; audio.play();"
-                    >
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>
-                        </svg>
-                    </button>
-                    <audio preload="none" src="{{ materialAsset('slider/B2/Advanced/chapter-11/audios/phrases/' . $phrase['file']) }}"></audio>
-                </article>
-            @endforeach
-        </section>
-
-        <aside class="photo-rail" aria-label="Photo placeholder">
-            <div class="photo-slot">
-                <div class="photo-slot-inner">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 4 4 2-2 5 4"/>
-                    </svg>
-                    <strong>Photo placeholder</strong>
-                </div>
-            </div>
-        </aside>
-    </div>
-</main>
-@endsection
+Warning: Array to string conversion in C:\Users\HP\Desktop\chpter 11\tmp\render-slide9.php on line 27
+Array
+</body>
+</html>

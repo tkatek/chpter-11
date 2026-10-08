@@ -7,7 +7,7 @@
         'callout_text' => <<<'HTML'
 <div class="writing-task-guide">
     <div class="writing-section-label"><span>YOUR TASK</span></div>
-    <p class="writing-instruction">Write an argumentative essay of 180–220 words.</p>
+    <p class="writing-instruction">Write an argumentative essay of 180–220 words on the following topic:</p>
 
     <div class="writing-prompt">
         Technology is changing sport in many ways.<br>
@@ -52,7 +52,9 @@
 </div>
 HTML,
         'placeholder' => 'Write your 180–220-word argumentative essay here…',
-        'model_answer' => 'Technology has become an increasingly important part of modern sport. From video refereeing to equipment designed to protect athletes, it has changed the way sports are played and judged. Although technology has several disadvantages, I believe its benefits are greater when it is used responsibly.
+        'model_answer' => 'Is Technology Changing Sport for the Better or Worse?
+
+Technology has become an increasingly important part of modern sport. From video refereeing to equipment designed to protect athletes, it has changed the way sports are played and judged. Although technology has several disadvantages, I believe its benefits are greater when it is used responsibly.
 
 One major advantage is that technology can make sport fairer. For example, VAR can help referees make more accurate decisions by reviewing important moments during football matches. Similarly, Hawk-Eye can reduce human errors in tennis by providing an additional source of information. Technology can also make sport safer. The halo system in Formula 1, for instance, protects drivers’ heads and has helped prevent serious injuries.
 

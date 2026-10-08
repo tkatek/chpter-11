@@ -14,39 +14,10 @@
 @include('slider.game.spin-wheel', ['content' => $content])
 
 <style>
-    #wheel text,
-    #spinWheel text,
-    .spin-wheel text,
-    [class*="wheel"] svg text {
-        font-size: 14px !important;
+    /* The spin-wheel component draws labels as SVG text inside #wheel-svg (viewBox 1000).
+       CSS px on SVG text = user units, so this scales the segment labels directly. */
+    #wheel-svg text {
+        font-size: 28px !important;
         font-weight: 800 !important;
     }
 </style>
-
-<script>
-    (() => {
-        const contextPrototype = window.CanvasRenderingContext2D?.prototype;
-        if (!contextPrototype || contextPrototype.__chapter11WheelFontBoost) return;
-
-        const originalFillText = contextPrototype.fillText;
-        contextPrototype.fillText = function (text, x, y, maxWidth) {
-            const label = String(text ?? '');
-            const shouldEnlarge = this.canvas && label.length > 8 && label.toUpperCase() !== 'READY?';
-
-            if (!shouldEnlarge) {
-                return originalFillText.apply(this, arguments);
-            }
-
-            const originalFont = this.font;
-            this.font = originalFont.replace(/(\d+(?:\.\d+)?)px/, (_, size) => `${Math.round(Number(size) * 1.12 * 10) / 10}px`);
-            const result = maxWidth === undefined
-                ? originalFillText.call(this, text, x, y)
-                : originalFillText.call(this, text, x, y, maxWidth);
-            this.font = originalFont;
-            return result;
-        };
-        contextPrototype.__chapter11WheelFontBoost = true;
-
-        window.dispatchEvent(new Event('resize'));
-    })();
-</script>
